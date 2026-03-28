@@ -147,7 +147,7 @@ export default function Analytics() {
                     <Pie data={data.membership_ratio} dataKey="cnt" nameKey="member_type" cx="50%" cy="50%" outerRadius={80} label>
                       {data.membership_ratio.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
                     </Pie>
-                    <Legend formatter={(v) => v.charAt(0).toUpperCase() + v.slice(1)} />
+                    <Legend formatter={(v) => v ? v.charAt(0).toUpperCase() + v.slice(1) : ''} />
                     <Tooltip contentStyle={{ background: '#1A1A2E', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
                   </PieChart>
                 </ResponsiveContainer>
