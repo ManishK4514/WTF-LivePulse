@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0D0D1A;
+    color: #E2E8F0;
+  }
+}
+
+@layer utilities {
+  .animate-count {
+    transition: all 300ms ease-out;
+  }
+  .skeleton {
+    @apply animate-pulse bg-card rounded;
+  }
+}
